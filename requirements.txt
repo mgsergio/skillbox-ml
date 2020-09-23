@@ -1,0 +1,10 @@
+sklearn
+matplotlib
+missingno
+seaborn
+numpy
+pandas
+jupyter
+jupyterlab
+xlrd
+six
