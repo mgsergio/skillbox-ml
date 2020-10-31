@@ -18,9 +18,10 @@ in mkShell rec {
     #       See https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/python.section.md#python-setuppy-bdist_wheel-cannot-create-whl
     #       and https://nixos.org/nixpkgs/manual/#python
     unset SOURCE_DATE_EPOCH
-    python -m pip --disable-pip-version-check install \
-                  -r requirements.txt \
-                  ;
+
+    find . -name requirements.txt | \
+        xargs -I'{}' python -m pip --disable-pip-version-check install -r '{}'
+
     # Install dev staff to .venv. Can't do so in buildInputs cause VSCode
     # does not see paths from /nix/store.
     python -m pip --disable-pip-version-check install \
