@@ -1,5 +1,4 @@
 {
-    "sqltools.connections": [],
     "python.pythonPath": ".venv/bin/python",
     "python.dataScience.jupyterServerURI": "local"
 }
