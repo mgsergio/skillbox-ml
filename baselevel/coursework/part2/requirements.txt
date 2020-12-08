@@ -1,1 +1,4 @@
 psycopg2-binary
+
+nltk~=3.5
+pymystem3~=0.2.0

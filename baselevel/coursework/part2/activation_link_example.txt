@@ -1,0 +1,1 @@
+https://oauth.vk.com/authorize?client_id=0000000&display=page&redirect_uri=http://oauth.vk.com/blank.html&scope=all&response_type=token
