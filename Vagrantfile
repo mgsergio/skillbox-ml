@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "~/.gitconfig", destination: "/home/vagrant/.gitconfig"
 
   config.vm.hostname = "skillbox.local"
-  config.vm.network "private_network", ip: "192.168.100.1", hostname: true
+  config.vm.network "private_network", ip: "192.168.100.13", hostname: true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -25,7 +25,6 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.name = "skillbox"
     vb.memory = "2048"
-    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
   config.vm.provision "shell", inline: <<-SHELL
