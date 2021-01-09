@@ -12,8 +12,11 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/project"
   # config.vm.synced_folder "~/.ssh", "/home/vagrant/.ssh", mount_options: ["ro"]
   config.vm.synced_folder "~/.git", "/home/vagrant/.git", mount_options: ["ro"]
+  config.vm.synced_folder "~/Downloads", "/mnt/Downloads", mount_options: ["ro"]
 
   config.vm.provision "file", source: "~/.gitconfig", destination: "/home/vagrant/.gitconfig"
+  config.vm.provision "file", source: "~/.ssh/id_rsa", destination: "/home/vagrant/.ssh/"
+  config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "/home/vagrant/.ssh/"
 
   config.vm.hostname = "skillbox.local"
   config.vm.network "private_network", ip: "192.168.100.13", hostname: true
