@@ -1,1 +1,10 @@
-use nix
+
+## Nix is banished for now, due to broken jupyter.
+# use nix
+
+## Attempts to use wich conda. All failed :'(
+# conda activate ./.venv
+# use_conda
+
+## This one works in iTerm but not in VSCode terminal.
+# source activate "$(pwd)/.venv"
