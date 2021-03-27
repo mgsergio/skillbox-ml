@@ -1,5 +1,14 @@
 {
     "python.pythonPath": ".venv/bin/python",
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py",
+        ".venv"
+    ],
+    "python.workspaceSymbols.exclusionPatterns": [
+        "**/site-packages/**",
+        ".venv"
+    ],
     // NOTE: Uncomment the next line if direnv is used.
     // "python.terminal.activateEnvironment": false
     // "python.pythonPath": "/usr/bin/python3",
