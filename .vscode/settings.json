@@ -9,6 +9,7 @@
         "**/site-packages/**",
         ".venv"
     ],
+    "terminal.integrated.inheritEnv": false,
     // NOTE: Uncomment the next line if direnv is used.
     // "python.terminal.activateEnvironment": false
     // "python.pythonPath": "/usr/bin/python3",
